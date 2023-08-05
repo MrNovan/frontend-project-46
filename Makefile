@@ -7,11 +7,8 @@ lint:
 gendiff:
 	node bin/gendiff.js
 
-publish:
-	npm publish --dry-run
-
 test:
-	npm test --test-reporter=spec
+	npm test
 
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
