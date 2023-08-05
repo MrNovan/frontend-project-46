@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
+import process from 'process';
+import getDiff from '../src/index.js';
 
 const program = new Command();
 
 program
   .name('gendiff')
   .description('Compares two configuration files and shows a difference.')
-  .option('-v, --version', 'output the version number')
-  .option('-f, --format <type>', 'output format')
-  .argument('<filepath1>')
-  .argument('<filepath2>')
-  .action((filepath1, filepath2) => {
-    const options = program.opts().format;
-    const result = gendiff(filepath1, filepath2, options);
+  .version('1.0.0')
+  .option('-f, --format <type>', 'output format', 'stylish')
+  .argument('<filepath1>', 'first configuration file')
+  .argument('<filepath2>', 'second configuration file')
+  .action((filepath1, filepath2, options) => {
+    const result = getDiff(filepath1, filepath2, options.format);
     console.log(result);
   });
-program.parse();
+
+program.parse(process.argv);

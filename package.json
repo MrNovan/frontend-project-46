@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/MrNovan/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/MrNovan/frontend-project-46/actions)",
   "type": "module",
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
@@ -13,7 +13,8 @@
   "author": "Novan",
   "license": "ISC",
   "dependencies": {
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "eslint": "^8.45.0"
