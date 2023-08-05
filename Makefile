@@ -2,13 +2,13 @@ install:
 	npm ci
 
 lint:
-	npx eslint
+	npx eslint .
 
 gendiff:
 	node bin/gendiff.js
 
 test:
-	npm test
+	npx jest
 
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
