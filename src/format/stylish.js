@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const space = (depths, replacer = ' ', spacesCount = 4) => replacer.repeat(depths * spacesCount);
 
 const stringify = (data, depth) => {

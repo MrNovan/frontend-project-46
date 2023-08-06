@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 import _ from 'lodash';
 import path from 'path';
 import fs from 'fs';
 import parse from './parsers.js';
-import ast from '../format/index.js';
+import ast from './format/index.js';
 
 
 const compare = (data1, data2) => {

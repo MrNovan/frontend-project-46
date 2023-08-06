@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const stringify = (data) => {
     if (data instanceof Object) { return '[complex value]'; }
     return typeof data === 'string' ? `'${data}'` : data;

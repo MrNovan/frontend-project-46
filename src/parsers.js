@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import yaml from 'js-yaml';
 
 const parse = (fileContent, format) => {
