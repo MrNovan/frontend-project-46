@@ -15,11 +15,11 @@ const plain = (dataDif) => {
           return `${inner(item.children, newPath)}`; }
         case 'unchanged': return null;
         default: throw new Error(`Unknown item type: '${item.type}'!`);
-      } 
-      , '');
-      return result.filter((item) => item).join('\n');
-    };
-    return `${inner(dataDif).trim()}`;
+      }
+    }, '');
+    return result.filter((item) => item).join('\n');
   };
-  
-  export default plain;
+  return `${inner(dataDif).trim()}`;
+};
+
+export default plain;

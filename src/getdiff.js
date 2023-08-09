@@ -1,6 +1,6 @@
-import _ from 'lodash';
 import path from 'path';
 import fs from 'fs';
+import _ from 'lodash';
 import parse from './parsers.js';
 import ast from './format/index.js';
 
