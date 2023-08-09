@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import process from 'process';
 import getDiff from '../src/getdiff.js';
 
 const program = new Command();
@@ -17,4 +16,4 @@ program
     console.log(result);
   });
 
-program.parse(process.argv);
+program.parse();
