@@ -4,7 +4,6 @@ import fs from 'fs';
 import parse from './parsers.js';
 import ast from './format/index.js';
 
-
 const compare = (data1, data2) => {
   const keys1 = Object.keys(data1);
   const keys2 = Object.keys(data2);
@@ -31,12 +30,22 @@ const compare = (data1, data2) => {
   return result;
 };
 
-const getData = (filePath) => {
-  const fileContent = fs.readFileSync(filePath, 'utf-8').trim();
-  const fileExtName = path.extname(filePath).slice(1);
-  return parse(fileContent, fileExtName);
-};
+const getPath = (filename) => path.resolve(process.cwd(), filename);
 
-const getDiff = (file1, file2, format = 'stylish') => ast(compare(getData(file1), getData(file2)), format);
+const getFileFormat = (filename) => path.extname(filename).slice(1);
+
+const readFile = (filepath) => fs.readFileSync(filepath, 'utf8');
+
+const getDiff = (filepath1, filepath2, formatName = 'stylish') => {
+  const path1 = getPath(filepath1);
+  const data1 = parse(readFile(path1), getFileFormat(filepath1));
+
+  const path2 = getPath(filepath2);
+  const data2 = parse(readFile(path2), getFileFormat(filepath2));
+
+  const diff = compare(data1, data2);
+  const formattedDiff = ast(diff, formatName);
+  return formattedDiff;
+};
 
 export default getDiff;
