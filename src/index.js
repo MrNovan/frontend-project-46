@@ -4,9 +4,7 @@ import parse from './parsers.js';
 import ast from './format/index.js';
 import compare from './build.js';
 
-const fixturesPrefix = '__fixtures__/';
-
-const getPath = (filename) => path.resolve(process.cwd(), fixturesPrefix + filename);
+const getPath = (filename) => path.resolve(process.cwd(), filename);
 
 const getFileFormat = (filename) => path.extname(filename).slice(1);
 
