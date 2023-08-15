@@ -15,5 +15,17 @@ The difference calculator is a CLI program that shows the differences between tw
 To run tests, use the command: ```make test```
 
 
-## Example for JSON files::
+## Example for JSON files:
 [![asciicast](https://asciinema.org/a/x0wJ8RfMlxukgj9LlEzGA9MoB.svg)](https://asciinema.org/a/x0wJ8RfMlxukgj9LlEzGA9MoB)
+
+## Example for YAML files:
+[![asciicast](https://asciinema.org/a/y0WVw2NH2ekH1IrFYw0co5yp1.svg)](https://asciinema.org/a/y0WVw2NH2ekH1IrFYw0co5yp1)
+
+## Example for nested files:
+[![asciicast](https://asciinema.org/a/YnqZSiXYvb9zHYZeBLAAAkCpU.svg)](https://asciinema.org/a/YnqZSiXYvb9zHYZeBLAAAkCpU)
+
+## Flat format output example:
+[![asciicast](https://asciinema.org/a/FFX91mQcN6w7R7eJdZFUqKWmW.svg)](https://asciinema.org/a/FFX91mQcN6w7R7eJdZFUqKWmW)
+
+## Sample output in JSON format:
+[![asciicast](https://asciinema.org/a/UBk16Md8TxSRz06vA6WzRFBXe.svg)](https://asciinema.org/a/UBk16Md8TxSRz06vA6WzRFBXe)
