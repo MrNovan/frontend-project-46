@@ -11,5 +11,9 @@ The difference calculator is a CLI program that shows the differences between tw
 2. Clone the repository: ```https://github.com/MrNovan/frontend-project-46.git```
 3. Run command: ```make install```
 
+## Tests:
+To run tests, use the command: ```make test```
 
+
+## Example for JSON files::
 [![asciicast](https://asciinema.org/a/x0wJ8RfMlxukgj9LlEzGA9MoB.svg)](https://asciinema.org/a/x0wJ8RfMlxukgj9LlEzGA9MoB)
